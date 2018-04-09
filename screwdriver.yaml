@@ -1,0 +1,11 @@
+shared:
+  image: docker-registry.ops.yahoo.com:4443/sd_platform/nodejs_lib-node8:7.0.151
+  steps:
+    - hello: echo hello
+    
+jobs:
+  main:
+    requires: [~pr, ~commit]
+    steps:
+      - hello
+      
