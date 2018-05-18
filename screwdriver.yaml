@@ -2,7 +2,7 @@ jobs:
   main:
     image: node:6
     steps:
-      - env: env
+      - env: env | grep DEVICES
     requires: [~pr, ~commit]
     environment:
       DEVICES: "iPhone 7,iPhone 8"
