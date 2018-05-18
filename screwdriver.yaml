@@ -1,11 +1,14 @@
 shared:
-  image: buildpack-deps
+  image: node:6
   steps:
-    - hello: echo hello
+    - env: env
+  environment:
+    DEVICES: "iPhone 7,iPhone 8"
+  
     
 jobs:
   main:
     requires: [~pr, ~commit]
     steps:
-      - hello
+      - env
       
