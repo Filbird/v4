@@ -1,14 +1,9 @@
-shared:
-  image: node:6
-  steps:
-    - env: env
-  environment:
-    DEVICES: "iPhone 7,iPhone 8"
-  
-    
 jobs:
   main:
-    requires: [~pr, ~commit]
+    image: node:6
     steps:
-      - env
+      - env: env
+    requires: [~pr, ~commit]
+    environment:
+      DEVICES: "iPhone 7,iPhone 8"
       
