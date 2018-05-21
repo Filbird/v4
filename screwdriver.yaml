@@ -2,12 +2,6 @@ jobs:
   main:
     image: node:6
     steps:
-      - env: env | grep DEVICES
-      - create: echo 'test' > test.txt
-      - add: git add test.txt
-      - commit: git commit -m "test"
-      - push: git push origin master
+      - env: env
     requires: [~pr, ~commit]
-    environment:
-      DEVICES: "iPhone 7,iPhone 8"
       
