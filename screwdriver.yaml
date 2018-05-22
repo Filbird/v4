@@ -4,7 +4,7 @@ jobs:
     steps:
       - env: env
     requires: [~pr, ~commit]
-  ~pr:
+  pr:
     image: node:6
     steps:
       - hello: echo "hello"
