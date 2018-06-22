@@ -3,6 +3,6 @@ jobs:
     image: node:6
     steps:
       - env: env
-      - sleep: sleep 5000
+      - sleep: sleep 600
     requires: [~pr, ~commit]
       
